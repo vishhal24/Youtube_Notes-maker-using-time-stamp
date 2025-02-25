@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Video Notepad</title>
+  <style>
+    /* Reset & Box Sizing */
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Overall body styling */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 15px;
+      background: #f5f7fa;
+      color: #333;
+      width: 320px;
+    }
+    
+    /* Heading style */
+    h3 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 15px;
+    }
+    
+    /* Textarea styling */
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: none;
+      margin-bottom: 10px;
+      font-size: 14px;
+      background-color: #fff;
+    }
+    
+    /* Button styling */
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4a90e2;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #357ABD;
+    }
+    
+    /* Notes container styling */
+    #notes {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #fff;
+      padding: 10px;
+    }
+    
+    /* Individual note styling */
+    .note {
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+    }
+    .note:last-child {
+      border-bottom: none;
+    }
+    
+    /* Timestamp styling */
+    .timestamp {
+      font-weight: bold;
+      color: #4a90e2;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h3>YouTube Notepad</h3>
+  <textarea id="noteInput" rows="3" placeholder="Type your note here..."></textarea>
+  <button id="addNoteBtn">Add Note with Timestamp</button>
+  <button id="clearNotesBtn">Clear Notes</button>
+  <div id="notes"></div>
+  <button id="saveNotesBtn">Download Notes</button>
+  <script src="popup.js"></script>
+</body>
+</html>
